@@ -191,34 +191,7 @@ catch(PDOExecption $e){
         </main>
 
         <!-- footer  -->
-        <footer class="footer">
-            <div class="container2 row">
-                <div class="footer-col">
-                    <h4>About us</h4>
-                    <ul>
-                        <li><a href="#">We are junior students from University of Bahrain. We hope that you like this helpfull website. Tis website helps people around the world to create polls for free. :-)</a></li>
-
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact us</h4>
-                    <ul>
-                        <li><a href="https://www.gmail.com/">Email: pollMaker@gmail.com</a></li>
-                        <li><a href="#">Phone: +973 34567890</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow us</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div style="color: white; text-align: center; font-size: small; padding-top: 20px;">&copy; 2023 Poll Maker.
-                All rights reserved.</div>
-        </footer>
+        <?php include ('footer.php'); ?>
         <!-- end of footer  -->
 
     </div>
