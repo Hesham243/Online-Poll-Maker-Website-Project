@@ -12,6 +12,10 @@ body {
     background-color: #efece9;
 }
 
+.index-main{
+    min-height: 450px;
+}
+
 .header-container{
     position: fixed;
     width: 1024px;

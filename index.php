@@ -54,7 +54,7 @@ catch(PDOExecption $e){
             </div>
         </div>
             
-        <main>
+        <main class="index-main">
 
             <div class="allpollBoxes">
 

@@ -10,6 +10,9 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+#con{
+    padding-top: 100px;
+}
 
 /* Header style */
 header {
@@ -20,6 +23,10 @@ header {
     align-items: center;
     border-bottom: 1px solid white;
     width: 1024px;
+}
+#hd{
+    position: fixed;
+    top: 0px;
 }
 
 /* End of header style */

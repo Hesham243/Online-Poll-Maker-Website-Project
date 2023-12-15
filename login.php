@@ -63,10 +63,6 @@
 </head>
 
 <body>
-    <div class="logo1">
-        <h1 class="poll">Poll</h1>
-        <h2 class="maker">Maker</h2>
-    </div>
     <?php
         if(isset($register)){
             echo '<div id="customAlert">
@@ -76,6 +72,10 @@
             unset($register);
         }
     ?>
+    <div class="logo1">
+        <h1 class="poll">Poll</h1>
+        <h2 class="maker">Maker</h2>
+    </div>
 
     <div class="container">
 

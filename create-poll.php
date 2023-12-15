@@ -88,7 +88,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="con">
         <?php require('header.php'); ?>
         <?php
             if(isset($msgNotLoggedIn)){
