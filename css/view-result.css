@@ -1,9 +1,9 @@
-body {
+/* body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-}
+} */
 body {
     background-color: whitesmoke;
     font-family: cursive;
@@ -18,6 +18,82 @@ body {
     padding-top: 150px;
     padding-bottom: 50px;
 }
+
+/* Header style */
+header {
+    background-color: rgb(60, 60, 60);
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: 1024px;
+}
+#hd{
+    position: fixed;
+    top: 0px;
+}
+
+/* End of header style */
+
+/* Logo style */
+
+.logo {
+    padding: 10px 20px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.poll {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 0;
+}
+
+.maker {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-top: 0;
+}
+/* End of logo style */
+
+/* Navbar1 style */
+header .nav1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: larger;
+}
+
+header .nav1 a {
+    margin-right: 20px;
+    color: white;
+}
+
+header .nav1 .myButton1 {
+    margin-left: 30px;
+    border: 1px solid white;
+    padding: 6px 25px;
+}
+
+header .nav1 .myButton1:hover {
+    background-color: rgba(255, 173, 173, 0.233);
+}
+
+header .nav1 .myButton {
+    margin-left: 30px;
+    border: 1px solid white;
+    padding: 6px 25px;
+}
+
+header .nav1 .myButton:hover {
+    background-color: rgba(255, 173, 173, 0.233);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End of navbar1 style */
 
 .result {
     /* max-width: 800px;

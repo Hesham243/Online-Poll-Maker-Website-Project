@@ -10,6 +10,9 @@
 <body>
     
     <div class="container">
+        <?php 
+        require('header.php');
+        ?>
         <div class="result">
         <h2 id="poll-result">Poll Results</h2>
         <h3 style="color: #918181; font-size: 15px;">Poll Status: Inactive</h3>

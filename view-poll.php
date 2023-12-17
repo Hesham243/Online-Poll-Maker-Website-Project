@@ -24,15 +24,16 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
         $pollDetails=$sql->fetchAll(PDO::FETCH_ASSOC);
         if(count($pollDetails) != 0){
             //Displaying details for all types of users (logged in or not)
-            echo "<h3> Question: " . $pollDetails[0]['question'] . "</h3>";
             echo "<h3> Poll Status: " . $pollDetails[0]['poll_status'] . "</h3>";
             if($pollDetails[0]['end_date'] != '0000-00-00' && $pollDetails[0]['poll_status'] == 'active'){
                 echo "<h3> Active Till: " . $pollDetails[0]['end_date'] . "</h3>";
             }
+            echo "<h3> Question: " . $pollDetails[0]['question'] . "</h3>";
 
             //only allow votes on active polls
             if($pollDetails[0]['poll_status'] == 'active'){
                 $user_id=$_SESSION['user'][0]; //get user id from the session
+
                 if($user_id == $pollDetails[0]['user_id']){
                     //Allow owner to terminate the poll
                     echo "<span>This poll is owned by you. Do you want to stop it?</span>";
@@ -78,33 +79,33 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
 
 
                 } else{
-                //If the user has already voted on the poll then show results only
-                $total_votes = $pollDetails[0]['total_votes'];
-                $sql3= $db -> prepare("SELECT * FROM answers WHERE poll_id=?");
-                $sql3->execute(array($poll_id));
-                $result3=$sql3->fetchAll(PDO::FETCH_ASSOC);
-                $ans_id=$result3[0]['answer_id'];
-                echo '
-                <h4>Results:</h4>
-                <h4>Total Votes: ' . $total_votes . '</h4>
-                ';
-                foreach ($result3 as $key => $options) {
-                    extract($options);
-                    if($total_votes == 0){
-                        $ansPercentage =0;
-                    } else{
-                    $ansPercentage = round(($num_votes / $total_votes),2)*100;
-                    }
-                    echo "Percentage:" . $ansPercentage . "%, Number of votes: " . $num_votes. "<br>";
+                    //If the user has already voted on the poll then show results only
+                    $total_votes = $pollDetails[0]['total_votes'];
+                    $sql3= $db -> prepare("SELECT * FROM answers WHERE poll_id=?");
+                    $sql3->execute(array($poll_id));
+                    $result3=$sql3->fetchAll(PDO::FETCH_ASSOC);
+                    $ans_id=$result3[0]['answer_id'];
                     echo '
-                    option:'.$answer.'
-                    <div class="option" style="width:400px; border: 1px solid black; border-radius:20px;">
-                    <div style="background-color:blue;color:white;width:'.$ansPercentage.'%; border-radius:10px; height:20px;">
-                    </div>
-                    </div><br>
+                    <h4>Results:</h4>
+                    <h4>Total Votes: ' . $total_votes . '</h4>
                     ';
-                }
-                echo "<a href='index.php'>Home</a>";
+                    foreach ($result3 as $key => $options) {
+                        extract($options);
+                        if($total_votes == 0){
+                            $ansPercentage =0;
+                        } else{
+                        $ansPercentage = round(($num_votes / $total_votes),2)*100;
+                        }
+                        echo "Percentage:" . $ansPercentage . "%, Number of votes: " . $num_votes. "<br>";
+                        echo '
+                        option:'.$answer.'
+                        <div class="option" style="width:400px; border: 1px solid black; border-radius:20px;">
+                        <div style="background-color:blue;color:white;width:'.$ansPercentage.'%; border-radius:10px; height:20px;">
+                        </div>
+                        </div><br>
+                        ';
+                    }
+                    echo "<a href='index.php'>Home</a>";
                 }
 
 
