@@ -1,5 +1,5 @@
 
-<header>
+<header id="hd">
     <div class="logo">
         <h1 class="poll">Poll</h1>
         <h2 class="maker">Maker</h2>

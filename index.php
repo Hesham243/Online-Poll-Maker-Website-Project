@@ -54,7 +54,7 @@ catch(PDOExecption $e){
             </div>
         </div>
             
-        <main>
+        <main class="index-main">
 
             <div class="allpollBoxes">
 
@@ -210,7 +210,7 @@ catch(PDOExecption $e){
         </main>
 
         <!-- footer  -->
-        <?php include('footer.php') ?>
+        <?php include ('footer.php'); ?>
         <!-- end of footer  -->
 
     </div>

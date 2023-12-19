@@ -1,8 +1,6 @@
+
 .footer {
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    z-index: -1;
-    width: 1024px;
+    background-color: #151515;
 }
 
 .footer .container2 {

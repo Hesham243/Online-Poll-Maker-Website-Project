@@ -1,4 +1,9 @@
-
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: whitesmoke;
     font-family: cursive;
@@ -10,10 +15,24 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: #00000014;
-    padding-top: 50px;
+    padding-top: 150px;
     padding-bottom: 50px;
 }
 
+.result {
+    /* max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    margin: 0px auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
 #poll-result{
     text-align: center;
 }
@@ -48,16 +67,4 @@ body {
 
 .percentage {
     font-weight: bold;
-}
-
-@media(max-width:768px) {
-    .result{
-        font-size: 21px;
-    }
-}
-
-@media(max-width:500px) {
-    .result{
-        font-size: 25px;
-    }
 }

@@ -12,6 +12,10 @@ body {
     background-color: #efece9;
 }
 
+.index-main{
+    min-height: 450px;
+}
+
 .header-container{
     position: fixed;
    width: 1024px;
@@ -197,17 +201,14 @@ main {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
-        color: black;
     }
 
     .footer-col h4 {
         font-size: 30px;
-        color: black;
     }
 
     .footer-col ul li a {
         font-size: 1.5rem;
-        color: black;
     }
 }
 
@@ -230,17 +231,5 @@ main {
     }
     .pollBoxOwner {
         font-size: 25px;
-    }
-
-    .footer-col {
-        width: 100%;
-    }
-
-    .footer-col h4 {
-        font-size: 40px;
-    }
-
-    .footer-col ul li a {
-        font-size: 2rem;
     }
 }

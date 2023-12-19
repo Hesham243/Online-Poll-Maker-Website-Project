@@ -89,9 +89,7 @@ session_start();
 
 <body>
     <div class="container" id="con">
-        <?php
-         require('header.php'); 
-         ?>
+        <?php require('header.php'); ?>
         <?php
             if(isset($msgNotLoggedIn)){
                 echo '<div id="customAlert">
