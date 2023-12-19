@@ -73,8 +73,10 @@
     }
     ?>
     <div class="logo1">
-        <h1 class="poll">Poll</h1>
-        <h2 class="maker">Maker</h2>
+        <a href="index.php">
+            <h1 class="poll">Poll</h1>
+            <h2 class="maker">Maker</h2>
+        </a>
     </div>
 
     <div class="container">

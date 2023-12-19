@@ -42,7 +42,9 @@ header {
     margin: 0px auto;
     text-align: center;
 }
-
+.toIndex{
+    text-decoration: none;
+}
 .poll {
     font-size: 2em;
     color: #3498db;

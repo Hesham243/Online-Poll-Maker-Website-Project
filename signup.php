@@ -81,9 +81,11 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
 
 <body>
     <div class="logo1">
-        <h1 class="poll">Poll</h1>
-        <h2 class="maker">Maker</h2>
-    </div>
+        <a href="index.php" class="toIndex">
+            <h1 class="poll">Poll</h1>
+            <h2 class="maker">Maker</h2>
+        </a>
+        </div>
     <div class="container">
         <div class="p-bottom">
             <h1>Sign-up</h1>
