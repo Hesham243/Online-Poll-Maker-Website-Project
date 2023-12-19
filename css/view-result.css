@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-} */
-=======
 html{
     height: 100%;
     background-image: url(https://i.pcmag.com/imagery/articles/009cW7ZeBNU4LFtBCTnxGII-3..v1660320145.jpg);
@@ -13,7 +5,6 @@ html{
     background-position: center;
     background-position: top;
 }
->>>>>>> cb4cc90401aff01a1b41d0c0b0c9756b6daed07f
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,99 +19,6 @@ body {
     padding-bottom: 50px;
 }
 
-<<<<<<< HEAD
-/* Header style */
-header {
-    background-color: rgb(60, 60, 60);
-    max-height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid white;
-    width: 1024px;
-}
-#hd{
-    position: fixed;
-    top: 0px;
-}
-
-/* End of header style */
-
-/* Logo style */
-
-.logo {
-    padding: 10px 20px;
-    margin: 10px 10px;
-    text-align: center;
-}
-
-.poll {
-    font-size: 2em;
-    color: #3498db;
-    margin-bottom: 0;
-}
-
-.maker {
-    font-size: 1.5em;
-    color: #e74c3c;
-    margin-top: 0;
-}
-/* End of logo style */
-
-/* Navbar1 style */
-header .nav1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: larger;
-}
-
-header .nav1 a {
-    margin-right: 20px;
-    color: white;
-}
-
-header .nav1 .myButton1 {
-    margin-left: 30px;
-    border: 1px solid white;
-    padding: 6px 25px;
-}
-
-header .nav1 .myButton1:hover {
-    background-color: rgba(255, 173, 173, 0.233);
-}
-
-header .nav1 .myButton {
-    margin-left: 30px;
-    border: 1px solid white;
-    padding: 6px 25px;
-}
-
-header .nav1 .myButton:hover {
-    background-color: rgba(255, 173, 173, 0.233);
-}
-
-a {
-    text-decoration: none;
-}
-
-/* End of navbar1 style */
-
-.result {
-    /* max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
-    margin: 0px auto;
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px black;
-    padding: 20px;
-    background-color: #f1f1f1;
-}
-=======
->>>>>>> cb4cc90401aff01a1b41d0c0b0c9756b6daed07f
 #poll-result{
     text-align: center;
 }
