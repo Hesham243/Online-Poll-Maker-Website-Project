@@ -1,0 +1,186 @@
+body {
+    background-color: whitesmoke;
+    font-family: cursive;
+} */
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #00000014;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* Header style */
+header {
+    position: fixed;
+    width: 1024px;
+     top: 0;
+    background-color: rgb(0, 0, 0);
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+/* End of header style */
+
+
+/* Logo style */
+.logo {
+    padding: 10px 20px;
+    margin: 10px 10px;
+    text-align: center;
+}
+.logo1{
+    width: 150px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.poll {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 0;
+}
+
+.maker {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-top: 0;
+}
+/* End of logo style */
+
+/* Navbar1 style */
+header .nav1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: larger;
+}
+
+header .nav1 a {
+    margin-right: 15px;
+    color: white;
+}
+
+header .nav1 .myButton1 {
+    margin-left: 30px;
+    border: 1px solid white;
+    padding: 6px 25px;
+    border-radius: 5px;
+}
+
+header .nav1 .myButton1:hover {
+    background-color: white;
+    color: black;
+}
+
+header .nav1 .myButton {
+    margin-left: 30px;
+    border: 1px solid white;
+    padding: 6px 25px;
+    border-radius: 5px;
+}
+
+header .nav1 .myButton:hover {
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+/* End of navbar1 style */
+
+
+
+
+#vote-con{
+    margin: 100px auto 0 auto;
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+.question-polldate{
+    flex-direction: column;
+    display: flex;
+}
+.status-enddate{
+    color: #918181;
+    font-size: 15px;
+    padding: 26px 26px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #333;
+}
+
+.option {
+    margin: 15px 0;
+}
+
+label {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #555;
+}
+
+.vote-button {
+    margin-top: 30px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#login-vote{
+    color: #ff0000c2;
+    text-decoration: underline;
+}
+
+@media(max-width:768px) {
+    .status-enddate{
+        font-size: 18px;
+    }
+    form div.option label{
+        font-size: 20px;
+    }
+
+    .vote-button input, .vote-button span{
+        font-size: 19px;
+    }
+}
+
+@media(max-width:500px) {
+    #vote-con{
+        width: 90%;
+    }
+    .status-enddate{
+        font-size: 20px;
+    }
+    form div.option label{
+        font-size: 25px;
+    }
+
+    .vote-button input, .vote-button span{
+        font-size: 25px;
+    }
+}

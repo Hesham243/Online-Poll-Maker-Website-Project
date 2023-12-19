@@ -14,13 +14,14 @@ body {
 
 .header-container{
     position: fixed;
-    width: 1024px;
+   width: 1024px;
     top: 0;
 }
 
+
 /* Header style */
 header {
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(0, 0, 0);
     max-height: 100px;
     display: flex;
     justify-content: space-between;
@@ -71,20 +72,24 @@ header .nav1 .myButton1 {
     margin-left: 30px;
     border: 1px solid white;
     padding: 6px 25px;
+    border-radius: 5px;
 }
 
 header .nav1 .myButton1:hover {
-    background-color: rgba(255, 173, 173, 0.233);
+    background-color: white;
+    color: black;
 }
 
 header .nav1 .myButton {
     margin-left: 30px;
     border: 1px solid white;
     padding: 6px 25px;
+    border-radius: 5px;
 }
 
 header .nav1 .myButton:hover {
-    background-color: rgba(255, 173, 173, 0.233);
+    background-color: white;
+    color: black;
 }
 
 a {
@@ -94,7 +99,7 @@ a {
 
 /* Navbar2 style */
 .nav2 {
-    background-color: #efece9;
+   background-color: whitesmoke;
     border-bottom: 1px solid black;
     padding-bottom: 12px;
     padding-top: 12px;
@@ -103,21 +108,26 @@ a {
 
 .nav2 a {
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 80px;
     padding: 12px 17px;
     background: none;
-    border: none
+    border: none;
+    font-family:'Times New Roman', Times, serif;
 }
 
-a:hover {
-    color: rgba(128, 0, 0, 0.425);
+
+.nav2 a:hover {
+    transition-duration: 1s;
+    color:blue;
+    border-bottom: 3px solid blue;
 }
 /* End of navbar2 */
 
 main {
-    background-color: #efece9;
+    background-color: whitesmoke;
     min-height: 400px;
-    padding-top: 160px;
+    padding-top: 180px;
+    padding-bottom: 80px;
 }
 
 .myPollLogIn a:hover{
@@ -127,81 +137,15 @@ main {
     text-decoration:underline;
 }
 
-/* beginning of css footer  */
-.footer {
-    background-color: #151515;
-}
-
-.footer .container2 {
-    max-width: 1024px;
-    margin: auto;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-ul {
-    list-style: none;
-}
-
-.footer-col {
-    width: 25%;
-    padding: 0 15px;
-}
-
-.footer-col h4 {
-    font-size: 20px;
-    color: #FFF;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-}
-
-.footer-col ul li a {
-    color: #DDD;
-    display: block;
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-    color: #FFF;
-    padding-left: 7px;
-}
-
-.footer-col .social-links a {
-    color: #FFF;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    text-align: center;
-    margin: 0 10px 10px 0;
-    line-height: 40px;
-    transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover {
-    color: #151515;
-    background-color: #FFF;
-}
-
-/* end of css footer  */
-
 .pollBoxes {
     margin: 15px;
     border: 1px solid #c3c3e9;
     padding: 10px;
     border-radius: 15px;
     width: 43%;
-    background-color: #d1dee3;
+    background-color: rgba(3, 41, 255, 0.048);
     min-height: 50px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .pollBoxes:hover{
     box-shadow: 0 0 5px black;
@@ -239,8 +183,8 @@ ul {
     }
 
     .pollBoxes{
-        font-size: 23px;
-        width:60%;
+        font-size: 25px;
+        width:70%;
     }
     .allpollBoxes{
         justify-content: space-around;
@@ -253,14 +197,17 @@ ul {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+        color: black;
     }
 
     .footer-col h4 {
         font-size: 30px;
+        color: black;
     }
 
     .footer-col ul li a {
         font-size: 1.5rem;
+        color: black;
     }
 }
 

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
     if(isset($_POST['submit'])){
         $question=htmlspecialchars($_POST['question']);
         //$_POST['options'] is an array of choices
@@ -88,8 +88,10 @@
 </head>
 
 <body>
-    <div class="container">
-        <?php require('header.php'); ?>
+    <div class="container" id="con">
+        <?php
+         require('header.php'); 
+         ?>
         <?php
             if(isset($msgNotLoggedIn)){
                 echo '<div id="customAlert">
