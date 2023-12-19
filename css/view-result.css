@@ -1,15 +1,20 @@
-
-body {
-    background-color: whitesmoke;
-    font-family: cursive;
+html{
+    height: 100%;
+    background-image: url(https://i.pcmag.com/imagery/articles/009cW7ZeBNU4LFtBCTnxGII-3..v1660320145.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-position: top;
 }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .container {
     width: 1024px;
     min-height: 300px;
     margin-right: auto;
     margin-left: auto;
-    background-color: #00000014;
     padding-top: 50px;
     padding-bottom: 50px;
 }

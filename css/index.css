@@ -26,7 +26,7 @@ body {
 
 /* Header style */
 header {
-    background-color: rgb(0 0 0 / 85%);
+    background-color: rgb(0 0 0 / 90%);
     max-height: 100px;
     display: flex;
     justify-content: space-between;
