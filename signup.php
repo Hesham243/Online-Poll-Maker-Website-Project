@@ -5,7 +5,7 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
 
     //Check form submition
     if(isset($_POST['username'])){
-        //Save form input usin htmlspecialchars to avoid injection attacks
+        //Save form input using htmlspecialchars to avoid injection attacks
         $name = htmlspecialchars($_POST['username']);
         $email = htmlspecialchars($_POST['email']);
         $pass = htmlspecialchars($_POST['pass']);
@@ -16,9 +16,8 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
 
         //Validate name, email, and password using regexp and set appropriate error msgs
 
-        // die($name);
         //Only letters allowed in the name; First and last name required
-        $nameReg = "/^[a-z]+(\s[a-z])?$/i";
+        $nameReg = "/^[a-z]+(\s[a-z]+)?$/i";
         if(!preg_match($nameReg, $name)){
             $msgName = "*Enter a valid first and last name (Ex: Ali Mohd).";
         }
@@ -82,9 +81,11 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
 
 <body>
     <div class="logo1">
-        <h1 class="poll">Poll</h1>
-        <h2 class="maker">Maker</h2>
-    </div>
+        <a href="index.php" class="toIndex">
+            <h1 class="poll">Poll</h1>
+            <h2 class="maker">Maker</h2>
+        </a>
+        </div>
     <div class="container">
         <div class="p-bottom">
             <h1>Sign-up</h1>

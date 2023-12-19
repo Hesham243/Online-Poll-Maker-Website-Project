@@ -64,17 +64,19 @@
 
 <body>
     <?php
-        if(isset($register)){
-            echo '<div id="customAlert">
-            <p>'. $register.'</p>
-            <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
-            </div>';
-            unset($register);
-        }
+    if(isset($register)){
+        echo '<div id="customAlert">
+        <p>'. $register.'</p>
+        <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
+        </div>';
+        unset($register);
+    }
     ?>
     <div class="logo1">
-        <h1 class="poll">Poll</h1>
-        <h2 class="maker">Maker</h2>
+        <a href="index.php">
+            <h1 class="poll">Poll</h1>
+            <h2 class="maker">Maker</h2>
+        </a>
     </div>
 
     <div class="container">
@@ -102,8 +104,8 @@
             <form method="POST">
 
                 <div class=" input p-top p-bottom">
-                    <input class="" type="text" name="email" id="email" onkeyup="checkUN(this.value)" placeholder="Email"
-                        value="<?php if(isset($email))echo $email; ?>">
+                    <input class="" type="text" name="email" id="email" onkeyup="checkUN(this.value)"
+                        placeholder="Email" value="<?php if(isset($email))echo $email; ?>">
                     <span id="email_ch"><?php if(isset($msgEmail)){echo $msgEmail; unset($msgEmail);}?></span>
                 </div>
 
@@ -135,33 +137,32 @@
     </div>
 
     <script>
-        function hideCustomAlert() {
+    function hideCustomAlert() {
         document.getElementById('customAlert').style.display = 'none';
     }
 
     function checkUN(str) {
-    let emailReg = /^[\w\-]+@([\w-]+\.)+[\w-]{2,}$/i;
-  if (!emailReg.test(str)) {
-    document.getElementById("email_ch").innerHTML = "*Enter a valid email (Ex: example_123@gmail.com).";
-    document.getElementById('email_ch').style.color="red";
-    return;
-  }
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = myAJAXFunction;
-  xhttp.open("GET", "checkemail.php?q="+str);
-  xhttp.send();
-}
+        let emailReg = /^[\w\-]+@([\w-]+\.)+[\w-]{2,}$/i;
+        if (!emailReg.test(str)) {
+            document.getElementById("email_ch").innerHTML = "*Enter a valid email (Ex: example_123@gmail.com).";
+            document.getElementById('email_ch').style.color = "red";
+            return;
+        }
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = myAJAXFunction;
+        xhttp.open("GET", "checkemail.php?q=" + str);
+        xhttp.send();
+    }
 
-function myAJAXFunction(){
-  if (this.responseText=="taken"){
-    document.getElementById('email_ch').style.color="";
-    document.getElementById("email_ch").innerHTML = "";
-  }
-  else {
-    document.getElementById('email_ch').style.color="red";
-    document.getElementById("email_ch").innerHTML = "No user register with this email";
-  }
-}
+    function myAJAXFunction() {
+        if (this.responseText == "taken") {
+            document.getElementById('email_ch').style.color = "";
+            document.getElementById("email_ch").innerHTML = "";
+        } else {
+            document.getElementById('email_ch').style.color = "red";
+            document.getElementById("email_ch").innerHTML = "No user register with this email";
+        }
+    }
     </script>
 
 </body>

@@ -1,0 +1,66 @@
+
+html{
+    height: 100%;
+    background-image: url(https://i.pcmag.com/imagery/articles/009cW7ZeBNU4LFtBCTnxGII-3..v1660320145.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-position: top;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title
+{
+    text-align: center;
+    font-size: 32px;
+}
+.ST
+{
+    margin-top: 3px;
+    text-align: center;
+}
+.option
+{
+    text-align: center;
+}
+.option h4
+{
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.radius
+{
+    text-align: center;
+}
+.submit
+{
+    text-align:center;
+    margin-top: 7px;
+}
+.R-SUBMIT input
+{
+    width: 120px;
+    margin-top: 9px;
+}
+.R-SUBMIT input:hover
+{
+    background-color: white;
+    border-radius: 4px;
+}
+.submit a
+{
+
+  text-decoration: none;
+  color: black; 
+}
+.submit a:hover
+{
+    transition-duration: 3s;
+   border-bottom: 1px solid black;
+}
+.P-AND
+{
+    text-align: center;
+    
+}

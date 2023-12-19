@@ -54,7 +54,7 @@ catch(PDOExecption $e){
             </div>
         </div>
             
-        <main class="index-main">
+        <main>
 
             <div class="allpollBoxes">
 
@@ -80,10 +80,10 @@ catch(PDOExecption $e){
                             echo '
                         <div class="pollBoxes">
                         <a href="view-poll.php?poll_id='.$poll_id.'">
-                        <p>Q1: '.$question.'</p>
+                        <p>Q: '.$question.'</p>
                         <hr>
                         <p class="pollBoxOwner"><b>Poll Owner:</b> '.$rows2[0]['username'].'</p>
-                        <p class="pollBoxOwner"><b>Poll Status:</b> '.$poll_status.'</p>
+                        <p class="pollBoxOwner"><b>Poll Status:</b> <span style="color:green">'. strtoupper($poll_status).'</span></p>
                         </a>
                         </div>
                         ';
@@ -102,10 +102,10 @@ catch(PDOExecption $e){
                         echo '
                         <div class="pollBoxes">
                         <a href="view-poll.php?poll_id='.$poll_id.'">
-                        <p>Q1: '.$question.'</p>
+                        <p>Q: '.$question.'</p>
                         <hr>
                         <p class="pollBoxOwner"><b>Poll Owner:</b> '.$rows2[0]['username'].'</p>
-                        <p class="pollBoxOwner"><b>Poll Status:</b> '.$poll_status.'</p>
+                        <p class="pollBoxOwner"><b>Poll Status:</b> <span style="color:red">'. strtoupper($poll_status).'</span></p>
                         </a>
                         </div>
                         ';
@@ -117,22 +117,31 @@ catch(PDOExecption $e){
                         $sql = "SELECT * FROM poll WHERE user_id=$id";
                         $rs = $db->query($sql);
                         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+                        if(count($rows) == 0){
+                            echo "<h3>You don't currently own any polls. Create a poll <span class='myPollLogIn'><a href='create-poll.php'>here</a></span>.</h3>";
+                        } else {
                         foreach($rows as $k=>$details){
                             extract($details);
                             $sql2 = "SELECT username FROM users WHERE user_id=$id";
                             $rs2 = $db->query($sql2);
                             $rows2 = $rs2->fetchAll(PDO::FETCH_ASSOC);
+                            if($poll_status == 'active'){
+                                $stat = "<span style='color:green'>ACTIVE</span>";
+                            } else {
+                                $stat = "<span style='color:red'>INACTIVE</span>";
+                            }
                             echo '
                             <div class="pollBoxes">
                             <a href="view-poll.php?poll_id='.$poll_id.'">
-                                <p>Q1: '.$question.'</p>
+                                <p>Q: '.$question.'</p>
                                 <hr>
                                 <p class="pollBoxOwner"><b>Poll Owner:</b> '.$rows2[0]['username'].'</p>
-                                <p class="pollBoxOwner"><b>Poll Status:</b> '.$poll_status.'</p>
+                                <p class="pollBoxOwner"><b>Poll Status:</b> '.$stat.'</p>
                                 </a>
                                 </div>
                                 ';
                             }
+                        }
                         }else{
                             echo "<h3>please <span class='myPollLogIn'><a href='login.php'>login</a></span> To view your polls</h3>";
                         }
@@ -145,14 +154,19 @@ catch(PDOExecption $e){
                             $sql2 = "SELECT username FROM users WHERE user_id=$user_id";
                             $rs2 = $db->query($sql2);
                             $rows2 = $rs2->fetchAll(PDO::FETCH_ASSOC);
+                            if($poll_status == 'active'){
+                                $stat = "<span style='color:green'>ACTIVE</span>";
+                            } else {
+                                $stat = "<span style='color:red'>INACTIVE</span>";
+                            }
                             
                             echo '
                             <div class="pollBoxes">
                             <a href="view-poll.php?poll_id='.$poll_id.'">
-                            <p>Q1: '.$question.'</p>
+                            <p>Q: '.$question.'</p>
                             <hr>
                             <p class="pollBoxOwner"><b>Poll Owner:</b> '.$rows2[0]['username'].'</p>
-                            <p class="pollBoxOwner"><b>Poll Status:</b> '.$poll_status.'</p>
+                            <p class="pollBoxOwner"><b>Poll Status:</b> '.$stat.'</p>
                             </a>
                             </div>
                             ';
@@ -169,14 +183,19 @@ catch(PDOExecption $e){
                             $sql2 = "SELECT username FROM users WHERE user_id=$user_id";
                             $rs2 = $db->query($sql2);
                             $rows2 = $rs2->fetchAll(PDO::FETCH_ASSOC);
+                            if($poll_status == 'active'){
+                                $stat = "<span style='color:green'>ACTIVE</span>";
+                            } else {
+                                $stat = "<span style='color:red'>INACTIVE</span>";
+                            }
                             
                             echo '
                             <div class="pollBoxes">
                             <a href="view-poll.php?poll_id='.$poll_id.'">
-                            <p>Q1: '.$question.'</p>
+                            <p>Q: '.$question.'</p>
                             <hr>
                             <p class="pollBoxOwner"><b>Poll Owner:</b> '.$rows2[0]['username'].'</p>
-                            <p class="pollBoxOwner"><b>Poll Status:</b> '.$poll_status.'</p>
+                            <p class="pollBoxOwner"><b>Poll Status:</b> '.$stat.'</p>
                             </a>
                             </div>
                             ';
@@ -191,7 +210,7 @@ catch(PDOExecption $e){
         </main>
 
         <!-- footer  -->
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php') ?>
         <!-- end of footer  -->
 
     </div>
