@@ -56,9 +56,14 @@ session_start();
                         $stmt2= $db->prepare($sql2);
                         foreach($choice as $value){
                             $rs2 = $stmt2->execute([$value ,0 , $question_id]);
-                            if($rs2){
-                                $msgDone="the poll has been created successfully";
+                            if($rs2 != 1){
+                                // $msgDone="the poll has been created successfully";
+                               $msgError = "Failed";
+                               break;
                             }
+                        }
+                        if(!isset($msgError)){
+                            header('Location:view-poll.php?poll_id='.$question_id);
                         }
                     }
 
