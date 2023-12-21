@@ -57,12 +57,12 @@ body {
 
 @media(max-width:768px) {
     .result{
-        font-size: 21px;
+        font-size: 25px;
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:400px) {
     .result{
-        font-size: 25px;
+        font-size: 30px;
     }
 }

@@ -12,7 +12,7 @@
     <div class="container">
         <div class="result">
         <h2 id="poll-result">Poll Results</h2>
-        <h3 style="color: #918181; font-size: 15px;">Poll Status: Inactive</h3>
+        <h3 style="color: #918181; font-size:20px;">Poll Status: Inactive</h3>
         <h3>Question: Where are you from?</h3>
         
         <div class="option-container">

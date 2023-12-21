@@ -163,24 +163,12 @@ input[type="submit"]:hover {
 }
 
 @media(max-width:768px) {
-    .status-enddate{
-        font-size: 18px;
-    }
-    form div.option label{
-        font-size: 20px;
-    }
-
-    .vote-button input, .vote-button span{
-        font-size: 19px;
-    }
-}
-
-@media(max-width:500px) {
     #vote-con{
+        height: 800px;
         width: 90%;
     }
     .status-enddate{
-        font-size: 20px;
+        font-size: 25px;
     }
     form div.option label{
         font-size: 25px;
@@ -188,5 +176,26 @@ input[type="submit"]:hover {
 
     .vote-button input, .vote-button span{
         font-size: 25px;
+    }
+}
+
+@media(max-width:400px) {
+    #vote-con{
+        height: 900px;
+        width: 90%;
+    }
+
+    .status-enddate{
+        font-size: 20px;
+    }
+    .status-enddate span{
+        font-size: 25px;
+    }
+    form div.option label{
+        font-size: 30px;
+    }
+
+    .vote-button input, .vote-button span{
+        font-size: 30px;
     }
 }
