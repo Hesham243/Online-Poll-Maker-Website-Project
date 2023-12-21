@@ -57,13 +57,12 @@ session_start();
                         foreach($choice as $value){
                             $rs2 = $stmt2->execute([$value ,0 , $question_id]);
                             if($rs2 != 1){
-                                // $msgDone="the poll has been created successfully";
                                $msgError = "Failed";
                                break;
                             }
                         }
                         if(!isset($msgError)){
-                            header('Location:view-poll.php?poll_id='.$question_id);
+                            header('Location:view-poll.php?poll_id='.$question_id.'&pp=true');
                         }
                     }
 
@@ -101,13 +100,6 @@ session_start();
             if(isset($msgNotLoggedIn)){
                 echo '<div id="customAlert">
                 <p>'. $msgNotLoggedIn.' <a href="login.php">click here</a></p>
-                <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
-                </div>';
-                unset($msgDone);
-            }
-            if(isset($msgDone)){
-                echo '<div id="customAlert">
-                <p>'. $msgDone.'</p>
                 <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
                 </div>';
                 unset($msgDone);
@@ -176,10 +168,6 @@ session_start();
             optionsContainer.removeChild(optionContainer);
             --c;
         }
-    }
-
-    function hideCustomAlert() {
-        document.getElementById('customAlert').style.display = 'none';
     }
     </script>
 </body>

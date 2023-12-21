@@ -12,7 +12,12 @@
     $question = '';
 
     //Get the poll id from the GET method
-    if(isset($_GET['poll_id'])){
+    if(isset($_GET['poll_id']) || isset($_GET['pp'])){
+
+        if(isset($_GET['pp']) && $_GET['pp']==true){
+            $poll_created="Your poll has been created successfully";
+        }
+        
         $poll_id = $_GET['poll_id'];
         if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){  //Set user id if user is logged in
             $user_id = $_SESSION['user'][0];
@@ -92,6 +97,15 @@
 <body>
     <div class="container">
         <?php require('header.php'); ?>
+        <?php 
+        if(isset($poll_created)){
+            echo '<div id="customAlert">
+            <p>'.$poll_created.'</p>
+            <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
+            </div>';
+            unset($poll_created);
+        } 
+        ?>
         <div id="vote-con">
             <div class="question-polldate">
                 <div class="status-enddate">
@@ -211,6 +225,11 @@
         </div>
     </div>
 
+    <script>
+        function hideCustomAlert() {
+        document.getElementById('customAlert').style.display = 'none';
+    }
+    </script>
 </body>
 
 </html>

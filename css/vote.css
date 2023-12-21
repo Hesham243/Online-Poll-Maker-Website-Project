@@ -101,7 +101,26 @@ a {
 }
 /* End of navbar1 style */
 
+#customAlert {
+    margin: 41px 0 10px 0;
+    padding: 0 0 0 10px;
+    border: 1px solid #d2d1db;
+    color: #2f66a1;
+    background-color: #cce5ff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
 
+#customAlert p {
+    margin: 12px 0px;
+}
+
+#customAlert button {
+    margin: auto 0px;
+    background: none;
+    border: none;
+}
 
 
 #vote-con{
