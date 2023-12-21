@@ -1,10 +1,10 @@
 
 html{
     height: 100%;
-    background-image: url(https://i.pcmag.com/imagery/articles/009cW7ZeBNU4LFtBCTnxGII-3..v1660320145.jpg);
+    background-image: url(https://www.slidebackground.com/uploads/light-blue/navy-blue-shades-light-blue-image-background.jpg);
     background-attachment: fixed;
-    background-position: center;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -155,7 +155,7 @@ a {
 .pollBoxes {
     background-color: rgb(255 255 255 / 80%);
     width: 45%;
-    min-height: 50px;
+    height: 150px;
     padding: 10px;
     margin-bottom: 20px;
     border: 3px solid #ffffff;
