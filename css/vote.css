@@ -24,8 +24,8 @@ body {
 header {
     position: fixed;
     width: 1024px;
-     top: 0;
-     background-color: rgb(0 0 0 / 90%);
+    top: 0;
+    background-color: rgb(0 0 0 / 90%);
     max-height: 100px;
     display: flex;
     justify-content: space-between;
@@ -64,7 +64,7 @@ header {
 header .nav1 {
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: larger;
+    font-size: 25px;
 }
 
 header .nav1 a {
@@ -125,7 +125,7 @@ a {
 
 #vote-con{
     margin: 100px auto 0 auto;
-    width: 70%;
+    width: 80%;
     border-radius: 5px;
     box-shadow: 0 0 10px black;
     padding: 20px;
@@ -137,7 +137,7 @@ a {
 }
 .status-enddate{
     color: #918181;
-    font-size: 15px;
+    font-size: 22px;
     padding: 26px 26px 0 0;
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ h2 {
 }
 
 label {
-    font-size: 18px;
+    font-size: 25px;
     margin-left: 10px;
     color: #555;
 }
@@ -160,12 +160,15 @@ label {
 .vote-button {
     margin-top: 30px;
 }
+.vote-button span{
+    font-size: 25px;
+}
 
 input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
     padding: 12px 20px;
-    font-size: 15px;
+    font-size: 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -182,39 +185,63 @@ input[type="submit"]:hover {
 }
 
 @media(max-width:768px) {
+    header{
+        max-height: 135px;
+    }
     #vote-con{
         height: 850px;
         width: 90%;
     }
+    header .nav1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 35px;
+    }
     .status-enddate{
-        font-size: 25px;
+        font-size: 30px;
     }
     form div.option label{
-        font-size: 25px;
+        font-size: 32px;
+    }
+    input[type="submit"] {
+        font-size: 29px;
     }
 
-    .vote-button input, .vote-button span{
+    .vote-button input{
         font-size: 25px;
+    }
+    .vote-button span{
+        font-size: 30px;
     }
 }
 
-@media(max-width:400px) {
+@media(max-width:500px) {
+    header{
+        max-height: 150px;
+    }
+    header .nav1 {
+        font-size: 40px;
+    }
     #vote-con{
         height: 900px;
         width: 90%;
+        margin: 150px auto 0 auto;
     }
 
     .status-enddate{
-        font-size: 20px;
-    }
-    .status-enddate span{
         font-size: 25px;
     }
+    .status-enddate span{
+        font-size: 40px;
+    }
     form div.option label{
-        font-size: 30px;
+        font-size: 40px;
     }
 
-    .vote-button input, .vote-button span{
-        font-size: 30px;
+    .vote-button input{
+        font-size: 36px;
+    }
+    .vote-button span{
+        font-size: 40px;
     }
 }

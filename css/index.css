@@ -66,7 +66,7 @@ header {
 header .nav1 {
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 25;
+    font-size: 25px;
 }
 
 header .nav1 a {
@@ -162,13 +162,14 @@ a {
     border: 3px solid #ffffff;
     border-radius: 15px;
     box-shadow: 0px 0px 5px white;
+    font-size: 28px;
 }
 .pollBoxes:hover{
     box-shadow: 0 0 5px black;
 }
 
 .pollBoxOwner {
-    font-size: 15px;
+    font-size: 22px;
 }
 
 
@@ -180,11 +181,13 @@ a {
         padding: 5px 50px;
     }
     .nav2{
-        font-size: 27px;
+        font-size: 31px;
     }
 
-    .nav1 {
-        font-size: 27px;
+    header .nav1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 35px;
     }
 
     .logo {
@@ -193,14 +196,15 @@ a {
 
     .allpollBoxes{
         justify-content: space-around;
+        padding-top: 230px;
     }
     .pollBoxes{
-        font-size: 30px;
+        font-size: 35px;
         width:90%;
         min-height: 225px;
     }
     .pollBoxOwner {
-        font-size: 25px;
+        font-size: 33px;
     }
   
 
@@ -223,27 +227,32 @@ a {
 
 @media(max-width:400px) {
     header{
-        max-height: 140px;
+        max-height: 150px;
     }
 
+    header .nav1 {
+        font-size: 40px;
+    }
     .nav2 {
+        padding: 16px;
+        min-height: 40px;
         text-align: center;
-        font-size: 29px;
+        font-size: 30px;
     }
-
-    .nav1 {
-        font-size: 27px;
-    }
+    
 
     .logo {
         font-size: 24px;
     }
+    .allpollBoxes{
+        padding-top: 260px;
+    }
     .pollBoxes {
-        font-size: 35px;
-        width: 75%;
+        font-size: 45px;
+        width: 90%;
     }
     .pollBoxOwner {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .footer-col {

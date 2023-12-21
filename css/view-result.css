@@ -21,6 +21,7 @@ body {
 
 #poll-result{
     text-align: center;
+    font-size: 30px;
 }
 
 .option-container {
