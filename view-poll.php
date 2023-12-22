@@ -167,7 +167,7 @@
             if($voted && $status == 'active'){
                 if($isOwner){
                     echo '<form method="POST" <div class="vote-button">
-                    <p>This poll is owned by you. Do you want to stop it?</p>
+                    <p id="msgOwner">This poll is owned by you. Do you want to stop it?</p>
                     <input type="submit" value="End Poll" name="end_poll">
                 </div></form>';
                 }
