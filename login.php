@@ -4,6 +4,7 @@
     if(isset($_SESSION['registered'])){
         if($_SESSION['registered']){
             $register="Registered successfully. Please login to continue";
+            unset($_SESSION['registered']);
         }
     }
 
