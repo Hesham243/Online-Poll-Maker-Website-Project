@@ -169,6 +169,10 @@ session_start();
             --c;
         }
     }
+    
+    function hideCustomAlert() {
+        document.getElementById('customAlert').style.display = 'none';
+    }
     </script>
 </body>
 
