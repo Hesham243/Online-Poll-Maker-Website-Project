@@ -27,7 +27,7 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
             $msgEmail = "*Enter a valid email (Ex: example_123@gmail.com).";
         }
 
-        $preg = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_]).{8,}$/";
+        $preg = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*\-_]).{8,}$/";
         if(!preg_match($preg,$pass)){
             $msgPass = "*Password must contain at least one uppercase letter, lowercase letter, digit, special character, and (minimum 8 characters).";
         }

@@ -12,7 +12,7 @@
         $pass = htmlspecialchars($_POST['pass']);
 
         $emailreg = "/^[\w\-]+@([\w-]+\.)+[\w-]{2,}$/i";
-        $preg = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_]).{8,}$/";
+        $preg = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*\-_]).{8,}$/";
         if(!preg_match($emailreg,$email)){
             $msgEmail = "*Enter a valid email (Ex: example_123@gmail.com).";
         }
