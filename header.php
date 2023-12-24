@@ -5,10 +5,8 @@
     </div>
     <span class="burger-icon" onclick="toggleNav()">☰</span>
     <nav class="nav1">
-        <!-- <nav class="nav1"> -->
             <a href='index.php' class="myButton1">Home</a>
             <a href="create-poll.php" class="myButton1">Create Poll</a>
-        <!-- </nav> -->
 
         <?php
                 if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']==true){

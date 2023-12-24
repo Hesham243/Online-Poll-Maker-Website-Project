@@ -173,9 +173,6 @@ a {
 }
 
 
-
-
-
 /* Hamburger menu styles */
 .burger-icon {
     display: none;
@@ -229,12 +226,6 @@ a {
     .nav2{
         font-size: 31px;
     }
-
-    /* header .nav1 {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        font-size: 35px;
-    } */
 
     .logo {
         font-size: 21px;
