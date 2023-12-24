@@ -17,6 +17,10 @@
         if(isset($_GET['pp']) && $_GET['pp']==true){
             $poll_created="Your poll has been created successfully";
         }
+
+        if(isset($_GET['empt']) && $_GET['empt']){
+            $emptyMsg = "Please select an option!";
+        }
         
         $poll_id = $_GET['poll_id'];
         if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){  //Set user id if user is logged in
@@ -105,6 +109,14 @@
             </div>';
             unset($poll_created);
         } 
+
+        if(isset($emptyMsg)){
+            echo '<div id="customAlert">
+            <p>'.$emptyMsg.'</p>
+            <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
+            </div>';
+            unset($emptyMsg);
+        } 
         ?>
         <div id="vote-con">
             <div class="question-polldate">
@@ -176,14 +188,14 @@
 
         <?php } else if(!$voted && $loggedIn){  //Allow voting if poll is still active and user has not voted
         ?>
-            <form action="update_vote.php?poll_id=<?php echo $poll_id; ?>" method="post">
+            <form action="update_vote.php?poll_id=<?php echo $poll_id; ?>" method="post" name="voteForm">
                 <?php
                 $i=1;
                     foreach($options as $option){
                         extract($option);
                 ?>
                 <div class="option">
-                    <input type="radio" id="option<?php echo $i; ?>" name="options" value="<?php echo $answer_id; ?>" required>
+                    <input type="radio" id="option<?php echo $i; ?>" name="options" value="<?php echo $answer_id; ?>">
                     <label for="option<?php echo $i; ?>"><?php echo $answer; ?></label>
                 </div>
                 <?php $i++; } ?>
@@ -204,14 +216,14 @@
                 </form>
             <?php } else if(!$loggedIn){  //Disable voting if user is not logged in
                 ?>
-                    <form action="update_vote.php?poll_id=<?php echo $poll_id; ?>" method="post">
+                    <form action="update_vote.php?poll_id=<?php echo $poll_id; ?>" method="post" name="myForm">
                 <?php
                 $i=1;
                     foreach($options as $option){
                         extract($option);
                 ?>
                 <div class="option">
-                    <input type="radio" id="option<?php echo $i; ?>" name="options" value="<?php echo $answer_id; ?>" required disabled>
+                    <input type="radio" id="option<?php echo $i; ?>" name="options" value="<?php echo $answer_id; ?>" disabled>
                     <label for="option<?php echo $i; ?>"><?php echo $answer; ?></label>
                 </div>
                 <?php $i++; } ?>

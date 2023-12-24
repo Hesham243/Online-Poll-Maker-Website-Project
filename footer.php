@@ -13,7 +13,7 @@
                 <div class="footer-col">
                     <h4>About us</h4>
                     <ul>
-                        <li><a href="#">We are junior students from University of Bahrain. We hope that you like this helpfull website. Tis website helps people around the world to create polls for free. :-)</a></li>
+                        <li><a href="#">We are junior students from University of Bahrain. We hope that you like this helpfull website. This website helps people around the world to create polls for free. :-)</a></li>
 
                     </ul>
                 </div>

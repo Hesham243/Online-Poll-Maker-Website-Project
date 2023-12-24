@@ -5,7 +5,6 @@ session_start();
         //$_POST['options'] is an array of choices
         $choice=$_POST['options'];
         //choice[];
-
         if(!isset($_SESSION['loggedIn'])){
             $msgNotLoggedIn= "Please login to create poll";
         }else{
@@ -120,12 +119,12 @@ session_start();
                         <label for="options" class="m-bottom">Options</label> <span class="spanmsg"
                         id="sp1"><?php if(isset($msgEmptyChoice)){echo $msgEmptyChoice; unset($msgEmptyChoice);}?></span><br>
                         <div class="option-container myInput m-bottom">
-                            <input type="text" id="inpt_Opt" class="input-text" name="options[]" placeholder="Option 1"
+                            <input type="text" id="inpt_Opt" class="input-text" name="options[]" placeholder="Option"
                             value=<?php if(isset($choice))echo $choice[0];?>>
                             <button type="button" onclick="removeOption(this)"><img src="img/remove.png"></button>
                         </div>
                         <div class="option-container myInput m-bottom">
-                            <input type="text" id="inpt_Opt" class="input-text" name="options[]" placeholder="Option 2"
+                            <input type="text" id="inpt_Opt" class="input-text" name="options[]" placeholder="Option"
                             value=<?php if(isset($choice))echo $choice[1];?>>
                             <button type="button" onclick="removeOption(this)"><img src="img/remove.png"></button>
                         </div>
@@ -151,14 +150,15 @@ session_start();
     let c = 2;
 
     function addOption() {
-        ++c;
-        const optionsContainer = document.getElementById('options-container');
-        const newOption = document.createElement('div');
-        newOption.className = 'option-container myInput m-bottom';
-        newOption.innerHTML = '<input type="text" class="input-text" name="options[]" placeholder="Option ' + c +
-            '" >' +
+        if(c < 6){
+            ++c;
+            const optionsContainer = document.getElementById('options-container');
+            const newOption = document.createElement('div');
+            newOption.className = 'option-container myInput m-bottom';
+            newOption.innerHTML = '<input type="text" class="input-text" name="options[]" placeholder="Option" >' +
             '<button type="button" class="remove-option" onclick="removeOption(this)"><img src="img/remove.png"></button>';
-        optionsContainer.appendChild(newOption);
+            optionsContainer.appendChild(newOption);
+        }
     }
 
     function removeOption(button) {

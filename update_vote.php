@@ -7,7 +7,11 @@ if(isset($_POST['options'])){
         $db->beginTransaction();
         $user_id=$_SESSION['user'][0];
         $answer_id=intval($_POST['options']);
-        $poll_id=$_GET['poll_id'];
+        if(!isset($_GET['poll_id'])){
+            die("400 BAD REQUEST");
+        } else {
+            $poll_id=$_GET['poll_id'];
+        }
 
         $sql3 = $db -> prepare("UPDATE poll SET total_votes=total_votes+1 WHERE poll_id=?");
             $rs = $sql3 ->execute(array($poll_id));
@@ -37,5 +41,12 @@ if(isset($_POST['options'])){
         $db->rollBack();
         die("Error: ".$ex->getMessage());
     }
+    } else {
+        if(!isset($_GET['poll_id'])){
+            die("400 BAD REQUEST");
+        } else {
+            $poll_id=$_GET['poll_id'];
+            header('Location:view-poll.php?poll_id='.$poll_id. '&empt=true');
+        }
     }
 ?>
