@@ -157,7 +157,7 @@ catch(PDOExecption $e){
                             }
                         }
                         }else{
-                            echo "<h3 style='color: white; min-height: 200px'>please login To view your polls</h3>";
+                            echo "<h3 style='color: white; min-height: 200px'>Please login to view your polls</h3>";
                         }
                     } else if($poll_type=="allPolls"){
                         $sql = "SELECT * FROM poll";
