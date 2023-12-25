@@ -7,6 +7,7 @@
         $sql = "SELECT * FROM poll";
         $rows = $db->query($sql);
         $result = $rows->fetchAll(PDO::FETCH_ASSOC);
+        if($result){
         $todayDate = date("Y-m-d");
         foreach($result as $det){
             if($todayDate > $det['end_date'] && $det['end_date'] != '0000-00-00'){
@@ -17,6 +18,9 @@
                     die("Error updating poll status");
                 }
             }
+        }
+        }else{
+            $msgEmpty="No polls are created";
         }
     $db -> commit();
     $db = null;
@@ -55,13 +59,15 @@ catch(PDOExecption $e){
         </div>
             
         <main>
-
             <div class="allpollBoxes">
-
                 <?php
             try{
-                
                 require('connection.php');
+
+                if(isset($msgEmpty)){
+                    echo '<h3 style="color:white; min-height: 200px">'.$msgEmpty.'</h3>';
+                    unset($msgEmpty);
+                }else{
 
                 if(isset($_GET['typepoll'])){
                     $poll_type=$_GET['typepoll'];
@@ -71,6 +77,7 @@ catch(PDOExecption $e){
                         $sql = "SELECT * FROM poll WHERE poll_status='active'";
                         $rs = $db->query($sql);
                         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+                        if($rows){
                         foreach($rows as $k=>$details){
                             extract($details);
                             $sql2 = "SELECT username FROM users WHERE user_id=$user_id";
@@ -88,11 +95,15 @@ catch(PDOExecption $e){
                         </div>
                         ';
                     }
+                    }else{
+                        echo '<h3 style="color:white; min-height: 200px">There is no active polls</h3>';
+                    }
                     
                 } else if($poll_type=="inactive"){
                     $sql = "SELECT * FROM poll WHERE poll_status='inactive'";
                     $rs = $db->query($sql);
                     $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+                    if($rows){
                     foreach($rows as $k=>$details){
                         extract($details);
                         $sql2 = "SELECT username FROM users WHERE user_id=$user_id";
@@ -109,6 +120,9 @@ catch(PDOExecption $e){
                         </a>
                         </div>
                         ';
+                    }
+                    }else{
+                        echo '<h3 style="color:white; min-height: 200px">There is no inactive polls</h3>';
                     }
                     
                 } else if($poll_type=="myPolls"){
@@ -143,7 +157,7 @@ catch(PDOExecption $e){
                             }
                         }
                         }else{
-                            echo "<h3>please <span class='myPollLogIn'><a href='login.php'>login</a></span> To view your polls</h3>";
+                            echo "<h3 style='color: white; min-height: 200px'>please login To view your polls</h3>";
                         }
                     } else if($poll_type=="allPolls"){
                         $sql = "SELECT * FROM poll";
@@ -201,6 +215,10 @@ catch(PDOExecption $e){
                             ';
                         }
                     }
+
+
+
+                } //end of msgEmpty
                     
                 }catch(PDOException $ex){
                 die($ex->getMessage());
@@ -208,12 +226,11 @@ catch(PDOExecption $e){
             ?>
             </div>
         </main>
-
         <!-- footer  -->
         <?php include('footer.php') ?>
         <!-- end of footer  -->
-
     </div>
+
 </body>
 
 </html>

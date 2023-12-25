@@ -136,7 +136,7 @@ session_start();
                     <label for="end_date">End Date:</label>
                     <input type="date" name="end_date" id="end_date" placeholder="YYYY-MM-DD"> <span class="spanmsg"
                     id="sp2"><?php if(isset($msgInvalidDate)){echo $msgInvalidDate; unset($msgInvalidDate);}?></span>
-                    <small>Optional, either you can schedule a date to closs your poll or you can manually cancel it after creating it.</small>
+                    <small>Optional, either you can schedule a date to closs your poll or you can manually end it after creating it.</small>
                 </div>
                 
                 <div class="bx">

@@ -33,8 +33,6 @@
                     </div>
                 </div>
             </div>
-            <div style="color: white; text-align: center; font-size: small; padding-top: 20px;">&copy; 2023 Poll Maker.
-                All rights reserved.</div>
         </footer>
         <!-- end of footer  -->
 </body>
