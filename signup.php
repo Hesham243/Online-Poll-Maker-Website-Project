@@ -130,7 +130,7 @@ $_SESSION['registered'] = false; //Set session value 'registered' of user to be 
             </form>
         </div>
         <div class="p-bottom">
-            <p>already have an account ? <a href="login.php">Login</a></p>
+            <p>Already have an account ? <a href="login.php">Login</a></p>
         </div>
     </div>
     <script>
