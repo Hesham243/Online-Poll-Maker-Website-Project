@@ -101,7 +101,7 @@ session_start();
                 <p>'. $msgNotLoggedIn.' <a href="login.php">click here</a></p>
                 <button onclick="hideCustomAlert()"><img style="width: 25px; cursor: pointer;" src="img/remove.png"></button>
                 </div>';
-                unset($msgDone);
+                unset($msgNotLoggedIn);
             }
         ?>
             <form method="POST">
