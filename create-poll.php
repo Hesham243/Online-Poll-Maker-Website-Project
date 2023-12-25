@@ -5,7 +5,7 @@ session_start();
         //$_POST['options'] is an array of choices
         $choice=$_POST['options'];
         //choice[];
-        if(!isset($_SESSION['loggedIn'])){
+        if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
             $msgNotLoggedIn= "Please login to create poll";
         }else{
             //check the question, if the user input spaces instead of text than print msg
